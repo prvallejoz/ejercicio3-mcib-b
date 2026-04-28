@@ -66,6 +66,8 @@ Con este ejercicio se pretende describir la relación entre las variables y la c
 
 5.4  Graficamos la relación de días de estadía y precio promedio mediante un plot de violín.
 
+5.5  Para los modelos de machine learning se grafican las matrices de confusión.
+
 ## 6. Principales Hallásgos del Análisis
 
 6.1  Las reservas que terminan cancelándose fueron hechas, en promedio, con más anticipación que las reservas no canceladas, esto sugiere que mientras más tiempo pasa entre la reserva y la fecha de llegada, mayor puede ser la probabilidad de cancelación, posiblemente porque los clientes cambian planes, encuentran mejores opciones o modifican su viaje.
