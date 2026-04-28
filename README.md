@@ -68,13 +68,15 @@ Con este ejercicio se pretende describir la relación entre las variables y la c
 
 5.5  Para los modelos de machine learning se grafican las matrices de confusión.
 
-## 6. Principales Hallásgos del Análisis
+## 6. Principales Hallásgos del Análisis - Conclusiones
 
 6.1  Las reservas que terminan cancelándose fueron hechas, en promedio, con más anticipación que las reservas no canceladas, esto sugiere que mientras más tiempo pasa entre la reserva y la fecha de llegada, mayor puede ser la probabilidad de cancelación, posiblemente porque los clientes cambian planes, encuentran mejores opciones o modifican su viaje.
 
 6.2  La variable lead_time o anticipación de la reserva parece ser un factor importante para predecir cancelaciones, por lo que se espera que tenga peso relevante en los modelos de Machine Learning.
 
 6.3  La variable de precio también posee una relación importante aunque no la mayor respecto a las cancelaciones.
+
+6.4  Otro hallazgo interesante es que dentro de la variable depósito inicial, las reservas que se realizan sin depósito inicial tienden a cancelarse con más frecuencia que aquellas que se realizan con un depósito previo.
 
 ## 7. Implementación de Análisis Machine Learning
 
