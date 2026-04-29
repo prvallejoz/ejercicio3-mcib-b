@@ -268,6 +268,12 @@ Estos resultados validan el análisis exploratorio y muestran que la cancelació
 El proyecto demostró que los datos históricos pueden transformarse en información estratégica para mejorar la gestión hotelera. Se comprobó que las cancelaciones no ocurren al azar, sino que responden a patrones identificables relacionados con el tiempo de anticipación, el tipo de depósito, el canal de reserva, el historial del cliente y variables económicas. Desde el punto de vista predictivo, la Regresión Logística presentó el mejor equilibrio entre desempeño general y capacidad de detectar cancelaciones reales, mientras que Random Forest fue más restrictivo. Esto evidencia que modelos simples, correctamente implementados, pueden generar gran valor. En términos empresariales, un hotel podría utilizar estos hallazgos para anticipar pérdidas, ajustar políticas comerciales, mejorar proyecciones de ocupación y focalizar acciones preventivas sobre reservas de alto riesgo.
 
 
-# 10. Recomendaciones
+## 10. Recomendaciones
 
-Como línea de mejora futura, se recomienda profundizar el modelado predictivo mediante algoritmos más robustos como XGBoost, LightGBM o CatBoost, los cuales suelen ofrecer mejores resultados en datos tabulares. También sería conveniente aplicar técnicas de balanceo de clases como SMOTE para mejorar la detección de cancelaciones reales. Otra mejora importante sería realizar optimización automática de hiperparámetros mediante GridSearchCV o RandomizedSearchCV. Desde el punto de vista empresarial, sería valioso construir dashboards interactivos en Power BI o Streamlit para monitorear cancelaciones en tiempo real y desplegar un sistema de scoring que clasifique nuevas reservas según nivel de riesgo. Finalmente, integrar datos externos como clima, temporadas vacacionales, eventos locales o precios de competidores podría aumentar significativamente la capacidad predictiva del modelo.
+Como mejora futura, se recomienda continuar fortaleciendo el análisis predictivo para anticipar cancelaciones con mayor precisión. Para ello, se pueden probar otros modelos de Machine Learning que permitan comparar resultados y mejorar el desempeño obtenido en este trabajo.
+
+También sería importante seguir mejorando la calidad de los datos utilizados, incorporando nueva información relevante como temporadas altas, feriados, eventos locales o cambios de precios, ya que estos factores pueden influir en la decisión de cancelar una reserva.
+
+Desde el punto de vista del negocio, se recomienda utilizar los hallazgos obtenidos para diseñar estrategias preventivas, como confirmar reservas con mucha anticipación, revisar políticas de depósito y prestar mayor atención a los canales de venta con más cancelaciones.
+
+Finalmente, sería útil presentar los resultados en dashboards interactivos que permitan monitorear indicadores clave en tiempo real y apoyar una mejor toma de decisiones dentro del hotel.
