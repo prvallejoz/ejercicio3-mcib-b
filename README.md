@@ -2,7 +2,6 @@
 
 ## Grupo 7 – Análisis Predictivo de Cancelación de Reservas Hoteleras
 
----
 
 # 1. Coordinación y Repositorio Central
 
@@ -17,7 +16,6 @@ Cada mejora, corrección o bloque de análisis fue desarrollado de forma aislada
 
 El uso de control de versiones también permitió conservar historial de cambios, retroceder versiones si era necesario y documentar adecuadamente la evolución del proyecto.
 
----
 
 # 2. Selección del Dataset
 
@@ -45,6 +43,7 @@ El archivo utilizado fue:
 hotel_bookings.csv
 ```
 
+
 ## Justificación de la elección
 
 Este dataset fue seleccionado debido a que representa una problemática real dentro del sector hotelero: las cancelaciones de reservas. Dichas cancelaciones afectan ingresos, planificación operativa, asignación de habitaciones y proyección de demanda.
@@ -58,7 +57,6 @@ A través de este dataset es posible responder preguntas estratégicas como:
 
 Además, el volumen de datos y la variedad de variables lo convierten en una excelente base para aplicar limpieza de datos, visualización, análisis exploratorio y modelos predictivos.
 
----
 
 # 3. Objetivo del Proyecto
 
@@ -68,7 +66,6 @@ Como objetivo adicional, se desarrollaron modelos de Machine Learning capaces de
 
 En términos prácticos, este proyecto busca transformar datos históricos en herramientas de gestión predictiva.
 
----
 
 # 4. Procesamiento y Limpieza de Datos
 
@@ -130,7 +127,6 @@ Estas variables permitieron enriquecer el análisis y mejorar la capacidad predi
 
 Una vez finalizado el proceso, se verificó que los datos se encuentren listos para análisis y modelado sin errores críticos ni valores faltantes relevantes.
 
----
 
 # 5. Análisis Exploratorio de Datos (EDA)
 
@@ -176,7 +172,6 @@ Se generó matriz de correlación para detectar relaciones lineales entre variab
 
 Este análisis permitió llegar al modelado con mayor entendimiento del problema.
 
----
 
 # 6. Visualización de Datos
 
@@ -195,13 +190,11 @@ Se aplicaron gráficos desarrollados con Matplotlib y Seaborn, entre ellos:
 
 El uso de gráficos permitió no solo validar hipótesis estadísticas, sino también facilitar la interpretación para usuarios no técnicos.
 
----
 
 # 7. Principales Hallazgos del Proyecto
 
 El análisis permitió identificar patrones consistentes y de alto valor para el negocio hotelero. Las reservas canceladas fueron realizadas, en promedio, con mucha mayor anticipación que las reservas efectivamente concretadas, lo cual sugiere que mientras más tiempo transcurre entre la reserva y la fecha de llegada, mayor es la probabilidad de cambio de planes por parte del cliente. También se observó que las reservas sin depósito inicial presentan tasas significativamente superiores de cancelación, lo que evidencia que compromisos financieros tempranos reducen el abandono. Adicionalmente, canales digitales como agencias online concentraron una proporción importante de cancelaciones, mientras que clientes con historial previo de cancelaciones mostraron mayor reincidencia. Finalmente, variables económicas como el precio promedio diario (`ADR`) también mostraron influencia, confirmando que decisiones comerciales y sensibilidad al precio forman parte del comportamiento del consumidor.
 
----
 
 # 8. Machine Learning
 
@@ -220,7 +213,6 @@ Donde:
 
 Se compararon dos enfoques distintos.
 
----
 
 ## 8.1 Modelo Base: Regresión Logística
 
@@ -237,7 +229,6 @@ Se utilizó como modelo inicial debido a su rapidez, facilidad de interpretació
 
 El modelo logró una precisión general aceptable, clasificando correctamente la mayoría de los casos. Sin embargo, solo detectó cerca de la mitad de las cancelaciones reales. Aun así, mostró un equilibrio razonable entre precisión y recall, convirtiéndose en una base sólida de comparación.
 
----
 
 ## 8.2 Modelo Random Forest
 
@@ -254,7 +245,6 @@ Posteriormente se aplicó un Random Forest, modelo compuesto por múltiples árb
 
 Aunque el modelo mostró alta precisión al predecir cancelaciones, detectó pocas cancelaciones reales. Esto significa que fue demasiado conservador y solo marcó como cancelación aquellos casos muy evidentes. Para el objetivo principal del proyecto, tuvo menor utilidad que la Regresión Logística.
 
----
 
 ## 8.3 Importancia de Variables
 
@@ -272,19 +262,16 @@ El Random Forest identificó como variables más relevantes:
 
 Estos resultados validan el análisis exploratorio y muestran que la cancelación depende de factores temporales, comerciales, históricos y económicos.
 
----
 
 # 9. Conclusiones Finales
 
 El proyecto demostró que los datos históricos pueden transformarse en información estratégica para mejorar la gestión hotelera. Se comprobó que las cancelaciones no ocurren al azar, sino que responden a patrones identificables relacionados con el tiempo de anticipación, el tipo de depósito, el canal de reserva, el historial del cliente y variables económicas. Desde el punto de vista predictivo, la Regresión Logística presentó el mejor equilibrio entre desempeño general y capacidad de detectar cancelaciones reales, mientras que Random Forest fue más restrictivo. Esto evidencia que modelos simples, correctamente implementados, pueden generar gran valor. En términos empresariales, un hotel podría utilizar estos hallazgos para anticipar pérdidas, ajustar políticas comerciales, mejorar proyecciones de ocupación y focalizar acciones preventivas sobre reservas de alto riesgo.
 
----
 
 # 10. Valor Agregado del Proyecto
 
 Además de cumplir los requisitos solicitados, el proyecto incorporó valor adicional mediante trabajo colaborativo con GitHub, uso de ramas y Pull Requests, documentación técnica ordenada, ingeniería de variables, implementación de modelos predictivos, interpretación orientada al negocio y una narrativa clara que conecta datos con decisiones reales.
 
----
 
 # 11. Tecnologías Utilizadas
 
@@ -297,12 +284,7 @@ Además de cumplir los requisitos solicitados, el proyecto incorporó valor adic
 * Jupyter Notebook
 * GitHub
 
----
 
 # 12. Recomendaciones Futuras
 
 Como línea de mejora futura, se recomienda profundizar el modelado predictivo mediante algoritmos más robustos como XGBoost, LightGBM o CatBoost, los cuales suelen ofrecer mejores resultados en datos tabulares. También sería conveniente aplicar técnicas de balanceo de clases como SMOTE para mejorar la detección de cancelaciones reales. Otra mejora importante sería realizar optimización automática de hiperparámetros mediante GridSearchCV o RandomizedSearchCV. Desde el punto de vista empresarial, sería valioso construir dashboards interactivos en Power BI o Streamlit para monitorear cancelaciones en tiempo real y desplegar un sistema de scoring que clasifique nuevas reservas según nivel de riesgo. Finalmente, integrar datos externos como clima, temporadas vacacionales, eventos locales o precios de competidores podría aumentar significativamente la capacidad predictiva del modelo.
-
----
-
-# Muchas gracias.
