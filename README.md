@@ -268,11 +268,6 @@ Estos resultados validan el análisis exploratorio y muestran que la cancelació
 El proyecto demostró que los datos históricos pueden transformarse en información estratégica para mejorar la gestión hotelera. Se comprobó que las cancelaciones no ocurren al azar, sino que responden a patrones identificables relacionados con el tiempo de anticipación, el tipo de depósito, el canal de reserva, el historial del cliente y variables económicas. Desde el punto de vista predictivo, la Regresión Logística presentó el mejor equilibrio entre desempeño general y capacidad de detectar cancelaciones reales, mientras que Random Forest fue más restrictivo. Esto evidencia que modelos simples, correctamente implementados, pueden generar gran valor. En términos empresariales, un hotel podría utilizar estos hallazgos para anticipar pérdidas, ajustar políticas comerciales, mejorar proyecciones de ocupación y focalizar acciones preventivas sobre reservas de alto riesgo.
 
 
-# 10. Valor Agregado del Proyecto
-
-Además de cumplir los requisitos solicitados, el proyecto incorporó valor adicional mediante trabajo colaborativo con GitHub, uso de ramas y Pull Requests, documentación técnica ordenada, ingeniería de variables, implementación de modelos predictivos, interpretación orientada al negocio y una narrativa clara que conecta datos con decisiones reales.
-
-
-# 11. Recomendaciones Futuras
+# 10. Recomendaciones Futuras
 
 Como línea de mejora futura, se recomienda profundizar el modelado predictivo mediante algoritmos más robustos como XGBoost, LightGBM o CatBoost, los cuales suelen ofrecer mejores resultados en datos tabulares. También sería conveniente aplicar técnicas de balanceo de clases como SMOTE para mejorar la detección de cancelaciones reales. Otra mejora importante sería realizar optimización automática de hiperparámetros mediante GridSearchCV o RandomizedSearchCV. Desde el punto de vista empresarial, sería valioso construir dashboards interactivos en Power BI o Streamlit para monitorear cancelaciones en tiempo real y desplegar un sistema de scoring que clasifique nuevas reservas según nivel de riesgo. Finalmente, integrar datos externos como clima, temporadas vacacionales, eventos locales o precios de competidores podría aumentar significativamente la capacidad predictiva del modelo.
