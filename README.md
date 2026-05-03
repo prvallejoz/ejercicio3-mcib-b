@@ -2,6 +2,26 @@
 
 ## Grupo 7 – Análisis Predictivo de Cancelación de Reservas Hoteleras
 
+## Pregunta para el Trabajo Final
+
+### 1. En un escenario real de implementación en producción, ¿cómo diseñarías un sistema integral basado en este proyecto que no solo prediga cancelaciones, sino que además permita tomar decisiones automatizadas en tiempo real (por ejemplo, ajustes de precios, políticas de depósito o sobreventa controlada)?
+
+Se plantearia como un sistema integral dividido en varias capas que trabajen de forma continua y conectada. Primero, implementaría una capa de ingesta de datos en tiempo real, donde cada nueva reserva que entra al sistema desde cualquier canal se procese automáticamente. Esta capa podría integrarse mediante APIs con el sistema de gestión hotelera o el motor de reservas, asegurando que variables como lead_time, ADR, tipo de depósito, segmento de mercado, historial del cliente estén disponibles inmediatamente.
+
+Luego, se diseñaría una capa de procesamiento, donde se apliquen las mismas transformaciones utilizadas en el proyecto, pero de forma automática. Esto es clave para mantener consistencia entre el modelo entrenado y los datos en producción. Aquí también se podrían enriquecer los datos con información externa como temporada, feriados o eventos locales.
+
+Encima de esto, se implementaría una capa de predicción en tiempo real, donde el modelo se despliegue como un servicio API REST. Cada vez que ingresa una nueva reserva, el sistema devuelve una probabilidad de cancelación. Este score no solo clasifica 0 o 1, sino que permite definir niveles de riesgo alto, medio, bajo lo cual es más útil para la toma de decisiones.
+
+A partir de esa predicción, se incorporaría una capa de reglas de negocio, que es donde realmente donde se genera valor. Por ejemplo, si una reserva tiene alta probabilidad de cancelación, el sistema podría:
+•	Sugerir o aplicar automáticamente una política de depósito más estricta. 
+•	Ajustar dinámicamente el precio para compensar el riesgo. 
+•	Marcar la reserva como candidata para sobreventa controlada, considerando la probabilidad agregada de cancelaciones. 
+•	Enviar mensajes, incentivos o promociones al cliente para reducir la probabilidad de cancelación. 
+
+Además se incluiría una capa de monitoreo y retroalimentación, donde se evalúe constantemente el desempeño del modelo y el impacto de las decisiones tomadas. Esto permitiría detectar cambios en el comportamiento de los clientes, y así reentrenar el modelo periódicamente con datos más recientes.
+
+Finalmente se complementaría todo con una capa de visualización, donde los equipos del hotel puedan ver indicadores clave en tiempo real: tasa de cancelación esperada, reservas en riesgo, impacto del overbooking, ingresos proyectados, entre otros.
+
 
 # 1. Coordinación y Repositorio Central
 
